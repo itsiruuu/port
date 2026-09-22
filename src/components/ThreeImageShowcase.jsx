@@ -4,9 +4,9 @@ import { threeImageShowcase } from '../data/portfolioData';
 
 export const ThreeImageShowcase = ({ onEnlargeImage }) => {
   return (
-    <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
+    <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
+      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-accent/10 border border-pink-accent/30 text-pink-accent text-xs font-semibold uppercase tracking-wider mb-4">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Cinematic Showcase Gallery</span>
@@ -20,7 +20,7 @@ export const ThreeImageShowcase = ({ onEnlargeImage }) => {
       </div>
 
       {/* 3 Showcase Projects */}
-      <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
+      <div className="flex flex-col gap-8 sm:gap-12 md:gap-14">
         {threeImageShowcase.map((project) => {
           const isRight = project.alignment === 'right';
           const isLeft = project.alignment === 'left';

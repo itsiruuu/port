@@ -13,9 +13,9 @@ import showcase3Img from '../assets/projects/showcase-3.png';
 // Edit your name, titles, bio, and social media URLs below.
 // -------------------------------------------------------------------------
 export const personalInfo = {
-  name: "Irin Akter",
+  name: " Irin ",
   brandLogo: "Irin Akter",
-  role: "Senior Frontend Developer · UI/UX Enthusiast",
+  role: "Frontend Developer · UI/UX Enthusiast",
   location: "Dhaka , Bangladesh",
   email: "irinakter2926@gmail.com",
   phone: "+880 1763548215",
@@ -23,7 +23,7 @@ export const personalInfo = {
   heroEyebrow: "HELLO, INTERNET. I'M",
   heroHeadlinePrefix: "I build websites that are\nfast, modern, and ",
   heroHeadlineAccent: "built to perform.",
-  heroBio: "I'm a frontend developer focused on creating responsive, high-performance websites that combine clean code, thoughtful interactions, and seamless user experiences.",
+  heroBio: "I'm a Web Developer focused on creating responsive, high-performance websites that combine clean code, thoughtful interactions, and seamless user experiences.",
   aboutBio: "I specialize in full-stack architecture, frontend perfection, and lightning-fast web applications. Bridging design fidelity with robust engineering, I build digital products with clean type safety, optimized assets, and modular components that scale effortlessly. Whether starting from an empty repository or modernizing an existing legacy platform, I prioritize velocity, reliability, and memorable interaction design.",
   socialLinks: {
     github: "https://github.com",

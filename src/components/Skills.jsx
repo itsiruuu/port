@@ -32,9 +32,9 @@ export const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
+    <section id="skills" className="py-10 sm:py-14 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
         <span className="text-xs font-bold tracking-widest text-pink-accent uppercase mb-3 inline-block">
           Capabilities &amp; Technologies
         </span>

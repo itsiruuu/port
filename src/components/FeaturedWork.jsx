@@ -6,9 +6,9 @@ export const FeaturedWork = ({ onEnlargeImage }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
+    <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
           Featured Work
         </h2>
@@ -19,7 +19,7 @@ export const FeaturedWork = ({ onEnlargeImage }) => {
 
       {/* Featured Showcase Asset 1 */}
       <div
-        className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass-card-elevated border border-white/[0.1] shadow-2xl shadow-black/90 group cursor-pointer"
+        className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass-card-elevated border border-white/[0.1] shadow-2xl shadow-black/90 group cursor-pointer cursor-target"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={() => onEnlargeImage(showcase1Img, "Nexus Media & Interactive Commerce Ecosystem")}

@@ -10,15 +10,15 @@ import { personalInfo } from '../data/portfolioData';
 
 export const ContactCTA = ({ onOpenContactModal }) => {
   return (
-    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
+    <section id="contact" className="py-10 sm:py-14 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
       {/* Large Glass Card Container */}
-      <div className="relative rounded-[32px] sm:rounded-[44px] glass-card-elevated border border-white/[0.1] p-8 sm:p-12 md:p-16 overflow-hidden shadow-2xl shadow-black/90">
+      <div className="relative rounded-[32px] sm:rounded-[44px] glass-card-elevated border border-white/[0.1] p-6 sm:p-10 md:p-14 overflow-hidden shadow-2xl shadow-black/90">
         {/* Ambient pink spotlight background */}
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-pink-accent/15 blur-[120px] pointer-events-none" />
         <div className="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-pink-lavender/10 blur-[100px] pointer-events-none" />
 
         {/* Top Header Row with Headline & Pink Button */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-12 sm:pb-16 border-b border-white/[0.08] relative z-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-8 sm:pb-12 border-b border-white/[0.08] relative z-10">
           <div>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
               Ready to make your <br />
@@ -39,7 +39,7 @@ export const ContactCTA = ({ onOpenContactModal }) => {
         </div>
 
         {/* Bottom 4-Column Directory Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pt-12 sm:pt-14 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pt-8 sm:pt-10 relative z-10">
           {/* Column 1: Navigation */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">

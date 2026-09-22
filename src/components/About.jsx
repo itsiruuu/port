@@ -9,9 +9,9 @@ import { personalInfo } from '../data/portfolioData';
 
 export const About = ({ onOpenContactModal }) => {
   return (
-    <section id="about" className="py-20 sm:py-28 px-4 sm:px-6 max-w-5xl mx-auto relative z-10">
+    <section id="about" className="py-10 sm:py-14 px-4 sm:px-6 max-w-5xl mx-auto relative z-10">
       {/* Section Heading */}
-      <div className="text-center mb-12 sm:mb-16">
+      <div className="text-center mb-8 sm:mb-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
           Meet the <span className="font-mono text-pink-accent font-bold">&lt;developer&gt;</span>
         </h2>

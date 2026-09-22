@@ -20,9 +20,9 @@ export const Projects = ({ onOpenContactModal }) => {
       });
 
   return (
-    <section id="projects" className="py-20 sm:py-28 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
+    <section id="projects" className="py-10 sm:py-14 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
           Things I've <span className="text-pink-accent">built</span>
         </h2>
@@ -32,7 +32,7 @@ export const Projects = ({ onOpenContactModal }) => {
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-12 sm:mb-16">
+      <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-8 sm:mb-10">
         {categories.map((cat) => (
           <button
             key={cat}
