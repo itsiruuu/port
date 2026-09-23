@@ -5,134 +5,81 @@ import {
   Terminal, 
   GitBranch, 
   Sparkles,
-  Layers,
   Cpu
 } from 'lucide-react';
-import { FigmaIcon } from './Icons';
 import { skills, coreToolsList } from '../data/portfolioData';
 
 export const Skills = () => {
-  const getSkillIcon = (iconName) => {
+  const getCategoryIcon = (iconName) => {
     switch (iconName) {
-      case 'Figma':
-        return <FigmaIcon className="w-4 h-4 text-pink-accent" />;
-      case 'React':
-        return <Code2 className="w-4 h-4 text-pink-accent" />;
       case 'Layout':
         return <Layout className="w-4 h-4 text-pink-accent" />;
+      case 'Sparkles':
+        return <Sparkles className="w-4 h-4 text-pink-accent" />;
       case 'Terminal':
         return <Terminal className="w-4 h-4 text-pink-accent" />;
       case 'GitBranch':
         return <GitBranch className="w-4 h-4 text-pink-accent" />;
-      case 'Sparkles':
-        return <Sparkles className="w-4 h-4 text-pink-accent" />;
       default:
-        return <Layers className="w-4 h-4 text-pink-accent" />;
+        return <Code2 className="w-4 h-4 text-pink-accent" />;
     }
   };
 
   return (
-    <section id="skills" className="py-10 sm:py-14 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
+    <section id="skills" className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto relative z-10">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+      <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
         <span className="text-xs font-bold tracking-widest text-pink-accent uppercase mb-3 inline-block">
-          Capabilities &amp; Technologies
+          Technical Toolkit
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-          Skills &amp; <span className="text-pink-accent">Expertise</span>
+          Skills &amp; <span className="text-pink-accent">Technologies</span>
         </h2>
         <p className="text-sm sm:text-base text-gray-400 mt-3 font-normal max-w-2xl mx-auto leading-relaxed">
-          I combine clean code, modern frontend frameworks, and intuitive user experiences to design websites that drive growth and delight users.
+          Technologies and tools I work with to build responsive, modern, and clean web interfaces.
         </p>
       </div>
 
-      {/* 6 Skill Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 mb-16 sm:mb-20">
-        {skills.map((skill) => {
-          // Circular SVG parameters
-          const radius = 22;
-          const circumference = 2 * Math.PI * radius;
-          const strokeDashoffset = circumference - (skill.percentage / 100) * circumference;
-
-          return (
-            <div
-              key={skill.id}
-              className="rounded-2xl sm:rounded-3xl glass-card-elevated border border-white/[0.08] hover:border-pink-accent/40 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-accent/5 group"
-            >
-              <div>
-                {/* Top Row: Icon + Category Badge and Circular Progress */}
-                <div className="flex items-center justify-between gap-3 mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="p-1.5 rounded-lg bg-pink-accent/10 border border-pink-accent/20">
-                      {getSkillIcon(skill.iconName)}
-                    </div>
-                    <span className="text-[10px] sm:text-[11px] font-bold tracking-wider uppercase text-pink-accent/90">
-                      {skill.categoryBadge}
-                    </span>
-                  </div>
-
-                  {/* Circular Gauge */}
-                  <div className="relative flex items-center justify-center w-12 h-12 shrink-0">
-                    <svg className="w-12 h-12 -rotate-90" viewBox="0 0 54 54">
-                      {/* Background circle */}
-                      <circle
-                        cx="27"
-                        cy="27"
-                        r={radius}
-                        stroke="rgba(255, 255, 255, 0.08)"
-                        strokeWidth="3.5"
-                        fill="transparent"
-                      />
-                      {/* Animated/filled pink circle */}
-                      <circle
-                        cx="27"
-                        cy="27"
-                        r={radius}
-                        stroke="#e98bab"
-                        strokeWidth="3.5"
-                        strokeDasharray={circumference}
-                        strokeDashoffset={strokeDashoffset}
-                        strokeLinecap="round"
-                        fill="transparent"
-                        className="transition-all duration-1000 ease-out"
-                      />
-                    </svg>
-                    <span className="absolute text-[11px] font-bold text-white font-mono">
-                      {skill.percentage}%
-                    </span>
-                  </div>
+      {/* Categorized Skills Grid - Simple honest cards with tags */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 mb-14 sm:mb-16">
+        {skills.map((category) => (
+          <div
+            key={category.id}
+            className="rounded-2xl sm:rounded-3xl glass-card-elevated border border-white/[0.08] hover:border-pink-accent/30 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-accent/5 group"
+          >
+            <div>
+              {/* Category Header */}
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 rounded-xl bg-pink-accent/10 border border-pink-accent/20">
+                  {getCategoryIcon(category.iconName)}
                 </div>
-
-                {/* Title */}
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-pink-accent transition-colors">
-                  {skill.title}
+                <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-pink-accent transition-colors">
+                  {category.categoryTitle}
                 </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-normal mb-6">
-                  {skill.description}
-                </p>
               </div>
 
-              {/* Bottom Proficiency Level Bar */}
-              <div className="pt-4 border-t border-white/[0.06]">
-                <div className="flex items-center justify-between text-xs mb-2">
-                  <span className="text-gray-400 font-medium">Expertise Level</span>
-                  <span className="text-pink-accent font-semibold">{skill.expertiseLevel}</span>
-                </div>
-                <div className="w-full h-1.5 rounded-full bg-white/[0.08] overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-gradient-to-r from-pink-muted to-pink-accent shadow-sm shadow-pink-accent/50 transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.percentage}%` }}
-                  />
-                </div>
-              </div>
+              {/* 1-line honest description */}
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-normal mb-5">
+                {category.description}
+              </p>
             </div>
-          );
-        })}
+
+            {/* Skill Tags */}
+            <div className="flex flex-wrap gap-2 pt-4 border-t border-white/[0.06]">
+              {category.skillTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs font-medium text-gray-200 group-hover:border-pink-accent/30 hover:bg-pink-accent/10 hover:text-pink-accent transition-all duration-200"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* CORE TOOLS - Strip */}
+      {/* Core Tools Strip */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-8 border-t border-white/[0.08] max-w-4xl mx-auto">
         <span className="text-xs font-bold tracking-wider text-gray-400 uppercase shrink-0">
           Core Tools —
@@ -153,3 +100,5 @@ export const Skills = () => {
     </section>
   );
 };
+
+export default Skills;

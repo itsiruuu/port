@@ -4,19 +4,19 @@ import { personalInfo } from '../data/portfolioData';
 
 // =========================================================================
 // ABOUT COMPONENT
-// Developer introduction with circular studio portrait and bio details.
+// Developer introduction with portrait, honest bio, and role details.
 // =========================================================================
 
 export const About = ({ onOpenContactModal }) => {
   return (
-    <section id="about" className="py-10 sm:py-14 px-4 sm:px-6 max-w-5xl mx-auto relative z-10">
+    <section id="about" className="py-12 sm:py-16 px-4 sm:px-6 max-w-5xl mx-auto relative z-10">
       {/* Section Heading */}
       <div className="text-center mb-8 sm:mb-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-          Meet the <span className="font-mono text-pink-accent font-bold">&lt;developer&gt;</span>
+          About <span className="font-mono text-pink-accent font-bold">&lt;Me&gt;</span>
         </h2>
         <p className="text-base sm:text-lg text-gray-400 font-normal mt-2">
-          behind the codebase
+          {personalInfo.aboutSubtitle || "Frontend Developer · Dhaka, Bangladesh"}
         </p>
       </div>
 
@@ -32,13 +32,13 @@ export const About = ({ onOpenContactModal }) => {
               <div className="w-full h-full rounded-full overflow-hidden bg-[#111116]">
                 <img
                   src={personalInfo.profileImage}
-                  alt={personalInfo.name}
+                  alt="Irin Akter - React Frontend Developer"
                   className="w-full h-full object-cover contrast-110 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#111116] border border-pink-accent/30 text-[10px] uppercase font-bold tracking-wider text-pink-accent shadow-md whitespace-nowrap">
-              Available for work
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#111116] border border-pink-accent/40 text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-pink-accent shadow-md whitespace-nowrap">
+              Open to junior roles &amp; internships
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export const About = ({ onOpenContactModal }) => {
               {personalInfo.name}
             </h3>
             <p className="text-xs sm:text-sm font-medium text-pink-muted tracking-wide mb-4">
-              {personalInfo.role} · {personalInfo.location}
+              {personalInfo.aboutSubtitle || "Frontend Developer · Dhaka, Bangladesh"}
             </p>
 
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 font-normal">
@@ -56,19 +56,30 @@ export const About = ({ onOpenContactModal }) => {
             </p>
 
             {/* Action Links */}
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2 border-t border-white/[0.08]">
-              <button
-                onClick={onOpenContactModal}
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-pink-accent hover:text-pink-hover transition-colors group/btn"
-              >
-                <span>Initiate Project Request</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4 border-t border-white/[0.08]">
+              {personalInfo.resumeUrl ? (
+                <a
+                  href={personalInfo.resumeUrl}
+                  download
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-pink-accent hover:text-pink-hover transition-colors group/btn"
+                >
+                  <span>Download Resume</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                </a>
+              ) : (
+                <button
+                  onClick={onOpenContactModal}
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold tracking-wider uppercase text-pink-accent hover:text-pink-hover transition-colors group/btn"
+                >
+                  <span>Get in touch</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                </button>
+              )}
 
               <span className="text-white/20 hidden sm:inline">|</span>
 
               <a
-                href={personalInfo.socialLinks.github}
+                href={personalInfo.socialLinks?.github || "https://github.com/itsiruuu"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-gray-400 hover:text-white transition-colors"
@@ -83,3 +94,5 @@ export const About = ({ onOpenContactModal }) => {
     </section>
   );
 };
+
+export default About;

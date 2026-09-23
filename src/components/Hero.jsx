@@ -14,7 +14,7 @@ export const Hero = ({ onOpenContactModal }) => {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] sm:min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-28 sm:pt-36 pb-16 max-w-5xl mx-auto z-10"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-28 sm:pt-36 pb-16 max-w-5xl mx-auto z-10"
     >
       {/* Eyebrow badge */}
       <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] mb-6 sm:mb-8 backdrop-blur-md">
@@ -25,12 +25,12 @@ export const Hero = ({ onOpenContactModal }) => {
         </span>
       </div>
 
-      {/* Main Cinematic Headline */}
-      <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.12] sm:leading-[1.1] max-w-4xl mx-auto mb-6 sm:mb-8">
-        I build websites that are <br className="hidden sm:block" />
-        fast, modern, and{' '}
+      {/* Main Headline */}
+      <h1 className="text-4xl sm:text-6xl md:text-7xl 2xl:text-8xl font-extrabold text-white tracking-tight leading-[1.12] sm:leading-[1.1] max-w-5xl mx-auto mb-6 sm:mb-8">
+        I build clean, responsive <br className="hidden sm:block" />
+        web interfaces{' '}
         <span className="text-pink-accent text-glow-pink inline-block relative">
-          {personalInfo.heroHeadlineAccent}
+          {personalInfo.heroHeadlineAccent || "with React."}
           <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-pink-accent to-transparent opacity-80" />
         </span>
       </h1>
@@ -51,13 +51,25 @@ export const Hero = ({ onOpenContactModal }) => {
           <ArrowRight className="w-4 h-4 text-pink-accent group-hover:translate-x-1 transition-transform" />
         </a>
 
-        <button
-          onClick={onOpenContactModal}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-[#050507] bg-pink-accent hover:bg-pink-hover transition-all duration-300 shadow-lg shadow-pink-accent/25 hover:shadow-pink-accent/40 hover:-translate-y-0.5 active:translate-y-0"
-        >
-          Let's Work Together
-        </button>
+        {personalInfo.resumeUrl ? (
+          <a
+            href={personalInfo.resumeUrl}
+            download
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-[#050507] bg-pink-accent hover:bg-pink-hover transition-all duration-300 shadow-lg shadow-pink-accent/25 hover:shadow-pink-accent/40 hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Download Resume
+          </a>
+        ) : (
+          <button
+            onClick={onOpenContactModal}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-[#050507] bg-pink-accent hover:bg-pink-hover transition-all duration-300 shadow-lg shadow-pink-accent/25 hover:shadow-pink-accent/40 hover:-translate-y-0.5 active:translate-y-0"
+          >
+            Get in touch
+          </button>
+        )}
       </div>
     </section>
   );
 };
+
+export default Hero;

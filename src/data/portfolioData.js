@@ -4,173 +4,111 @@
 // =========================================================================
 
 import profileImg from '../assets/profile.jpg';
-import showcase1Img from '../assets/projects/showcase-1.png';
-import showcase2Img from '../assets/projects/showcase-2.png';
-import showcase3Img from '../assets/projects/showcase-3.png';
 
 // -------------------------------------------------------------------------
 // 1. PERSONAL INFORMATION
-// Edit your name, titles, bio, and social media URLs below.
 // -------------------------------------------------------------------------
 export const personalInfo = {
-  name: " Irin ",
+  name: "Irin Akter",
   brandLogo: "Irin Akter",
-  role: "Frontend Developer · UI/UX Enthusiast",
-  location: "Dhaka , Bangladesh",
+  role: "Frontend Developer",
+  location: "Dhaka, Bangladesh",
   email: "irinakter2926@gmail.com",
   phone: "+880 1763548215",
   profileImage: profileImg,
+
+  // Placeholder URLs (will render UI only when non-empty)
+  resumeUrl: "",       // I will fill this later
+  ogImageUrl: "",      // I will fill this later
+  linkedinUrl: "",     // I will fill this later
+
   heroEyebrow: "HELLO, INTERNET. I'M",
-  heroHeadlinePrefix: "I build websites that are\nfast, modern, and ",
-  heroHeadlineAccent: "built to perform.",
-  heroBio: "I'm a Web Developer focused on creating responsive, high-performance websites that combine clean code, thoughtful interactions, and seamless user experiences.",
-  aboutBio: "I specialize in full-stack architecture, frontend perfection, and lightning-fast web applications. Bridging design fidelity with robust engineering, I build digital products with clean type safety, optimized assets, and modular components that scale effortlessly. Whether starting from an empty repository or modernizing an existing legacy platform, I prioritize velocity, reliability, and memorable interaction design.",
+  heroHeadlinePrefix: "I build clean, responsive\nweb interfaces ",
+  heroHeadlineAccent: "with React.",
+  heroBio: "I'm a frontend developer from Dhaka who builds responsive websites with React, Tailwind CSS and JavaScript. Open to junior frontend roles and internships.",
+  
+  aboutSubtitle: "Frontend Developer · Dhaka, Bangladesh",
+  aboutBio: "I build responsive, clean web interfaces with React and Tailwind CSS. I'm focused on writing clean, readable code and constantly improving my JavaScript and Node.js fundamentals. Looking for a junior frontend role or internship where I can contribute, learn, and grow as part of a development team.",
+
   socialLinks: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    behance: "https://behance.net",
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
+    github: "https://github.com/itsiruuu",
+    linkedin: "", // Leave empty until filled, only renders if non-empty
     email: "mailto:irinakter2926@gmail.com",
   },
 };
 
 // -------------------------------------------------------------------------
 // 2. TECHNOLOGY STRIP (Icons displayed below Hero buttons)
+// Kept only HTML, CSS, JavaScript, React, Tailwind, Git, VS Code, Node.js, Bootstrap
 // -------------------------------------------------------------------------
 export const techStrip = [
+  { name: "React", category: "Frontend", color: "#61DAFB" },
+  { name: "JavaScript", category: "Language", color: "#F7DF1E" },
+  { name: "Tailwind CSS", category: "Styling", color: "#06B6D4" },
   { name: "HTML5", category: "Markup", color: "#E34F26" },
   { name: "CSS3", category: "Styling", color: "#1572B6" },
-  { name: "JavaScript", category: "Language", color: "#F7DF1E" },
-  { name: "React", category: "Framework", color: "#61DAFB" },
-  { name: "TypeScript", category: "Language", color: "#3178C6" },
-  { name: "Tailwind CSS", category: "Styling", color: "#06B6D4" },
+  { name: "Bootstrap", category: "Styling", color: "#7952B3" },
+  { name: "Node.js", category: "Runtime", color: "#339933" },
   { name: "Git", category: "VCS", color: "#F05032" },
   { name: "GitHub", category: "Collaboration", color: "#FFFFFF" },
-  { name: "Figma", category: "UI/UX", color: "#F24E1E" },
-  { name: "Node.js", category: "Runtime", color: "#339933" },
   { name: "VS Code", category: "Editor", color: "#007ACC" },
-  { name: "Webflow", category: "CMS", color: "#4353FF" },
 ];
 
 // -------------------------------------------------------------------------
-// 3. CORE TOOLS (Displayed beneath Skill Cards)
+// 3. CORE TOOLS (Displayed beneath Skills Cards)
+// Kept only tools from the skills list plus VS Code
 // -------------------------------------------------------------------------
 export const coreToolsList = [
-  { name: "Figma", category: "Design System" },
-  { name: "React", category: "Framework" },
-  { name: "TypeScript", category: "Language" },
-  { name: "Tailwind", category: "CSS Utility" },
+  { name: "React", category: "Frontend" },
+  { name: "JavaScript", category: "Language" },
+  { name: "Tailwind CSS", category: "Styling" },
+  { name: "HTML5", category: "Markup" },
+  { name: "CSS3", category: "Styling" },
+  { name: "Bootstrap", category: "Styling" },
+  { name: "Node.js", category: "Runtime" },
   { name: "Git", category: "Version Control" },
   { name: "GitHub", category: "DevOps" },
   { name: "VS Code", category: "Code Editor" },
-  { name: "Next.js", category: "Full-Stack" },
 ];
 
 // -------------------------------------------------------------------------
-// 4. SKILLS & EXPERTISE (6 Cards with Circular Progress Indicators)
+// 4. SKILLS & EXPERTISE
+// Grouped by category, tags with honest 1-line description. No percentages.
+// Allowed skills only: HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap, Node.js, C/C++, Git & GitHub
 // -------------------------------------------------------------------------
 export const skills = [
   {
-    id: "ui-ux",
-    categoryBadge: "FIGMA PROFESSIONAL",
-    title: "UI/UX Design",
-    percentage: 95,
-    expertiseLevel: "Expert",
-    description: "Creating scalable design systems, wireframes, and high-fidelity prototypes that establish seamless and enjoyable user interactions.",
-    iconName: "Figma",
-  },
-  {
-    id: "react-next",
-    categoryBadge: "FRONTEND ARCHITECT",
-    title: "React & Next.js",
-    percentage: 90,
-    expertiseLevel: "Advanced",
-    description: "Building high-performance, single-page web applications with reactive data flow, server-side rendering, and atomic component architecture.",
-    iconName: "React",
-  },
-  {
-    id: "modern-css",
-    categoryBadge: "SEMANTIC & RESPONSIVE",
-    title: "Modern CSS & HTML",
-    percentage: 95,
-    expertiseLevel: "Expert",
-    description: "Authoring pixel-perfect layouts using modern Grid, Flexbox, Tailwind, and post-processors with absolute compliance to W3C standards.",
+    id: "frontend-core",
+    categoryTitle: "Frontend Core",
     iconName: "Layout",
+    description: "Building responsive, modern, and accessible user interfaces from scratch.",
+    skillTags: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
-    id: "javascript",
-    categoryBadge: "CLEAN SCRIPTING",
-    title: "JavaScript",
-    percentage: 90,
-    expertiseLevel: "Advanced",
-    description: "Writing pristine, maintainable ES6+ code to handle state mutations, API integrations, and sophisticated DOM interactions asynchronously.",
-    iconName: "Terminal",
-  },
-  {
-    id: "client-systems",
-    categoryBadge: "CLIENT-FIRST SYSTEMS",
-    title: "Git & Development",
-    percentage: 85,
-    expertiseLevel: "Proficient",
-    description: "Developing bespoke, lightweight architectures, modern bundling workflows, and structured version control that empower teams to scale with confidence.",
-    iconName: "GitBranch",
-  },
-  {
-    id: "creative-direction",
-    categoryBadge: "CREATIVE DIRECTION",
-    title: "Performance & Brand",
-    percentage: 80,
-    expertiseLevel: "Proficient",
-    description: "Shaping distinct digital personas through customized typography scale design, color theory, asset production, and uniform brand guidelines.",
+    id: "styling-frameworks",
+    categoryTitle: "Styling & Frameworks",
     iconName: "Sparkles",
+    description: "Creating mobile-first responsive layouts with clean utility and component systems.",
+    skillTags: ["Tailwind CSS", "Bootstrap"],
+  },
+  {
+    id: "programming-backend",
+    categoryTitle: "Programming & Backend",
+    iconName: "Terminal",
+    description: "Writing solid programmatic logic and lightweight server scripts.",
+    skillTags: ["Node.js", "C/C++"],
+  },
+  {
+    id: "tools-collaboration",
+    categoryTitle: "Version Control & Tools",
+    iconName: "GitBranch",
+    description: "Collaborating with structured commits, version control, and modern editors.",
+    skillTags: ["Git & GitHub", "VS Code"],
   },
 ];
 
 // -------------------------------------------------------------------------
-// 5. THREE IMAGE SHOWCASE (Sequential Visual Tour using Uploaded Assets)
-// -------------------------------------------------------------------------
-export const threeImageShowcase = [
-  {
-    id: "showcase-01",
-    projectNumber: "PROJECT 01",
-    title: "High-Impact Multi-Brand Media & Storefront Portal",
-    category: "Full-Stack Media & Interactive Commerce",
-    description: "A comprehensive digital ecosystem featuring AI stream-to-clip engines, dynamic editorial storytelling, and responsive high-conversion storefronts.",
-    image: showcase1Img,
-    tags: ["React", "JavaScript", "Tailwind CSS", "Motion API"],
-    liveUrl: "#projects",
-    githubUrl: "https://github.com",
-    alignment: "center",
-  },
-  {
-    id: "showcase-02",
-    projectNumber: "PROJECT 02",
-    title: "Modular Capabilities & Enterprise Application Suite",
-    category: "Design Systems & High-Velocity UI",
-    description: "High-fidelity component systems engineered with atomic scalability, real-time telemetry metrics, and fluid micro-interactions.",
-    image: showcase2Img,
-    tags: ["Next.js", "Design Tokens", "Analytics", "PostCSS"],
-    liveUrl: "#skills",
-    githubUrl: "https://github.com",
-    alignment: "right",
-  },
-  {
-    id: "showcase-03",
-    projectNumber: "PROJECT 03",
-    title: "Conversion Architecture & Client Advisory Suite",
-    category: "Design Systems & Technical Advisory",
-    description: "Sleek client interaction flows, responsive layout systems, and automated quotation funnels wrapped in an ultra-minimal dark aesthetic.",
-    image: showcase3Img,
-    tags: ["Performance", "Accessibility", "A/B Testing", "SEO"],
-    liveUrl: "#faq",
-    githubUrl: "https://github.com",
-    alignment: "left",
-  },
-];
-
-// -------------------------------------------------------------------------
-// 6. THINGS I'VE BUILT (6 Responsive Project Cards)
+// 5. THINGS I'VE BUILT (6 Responsive Project Cards - UNTOUCHED)
 // -------------------------------------------------------------------------
 export const gridProjects = [
   {
@@ -237,7 +175,7 @@ export const gridProjects = [
 ];
 
 // -------------------------------------------------------------------------
-// 7. FREQUENTLY ASKED QUESTIONS (Accordion Items)
+// 6. FREQUENTLY ASKED QUESTIONS (Accordion Items - UNTOUCHED)
 // -------------------------------------------------------------------------
 export const faqs = [
   {

@@ -4,20 +4,16 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TechStack } from './components/TechStack';
 import { About } from './components/About';
-import { FeaturedWork } from './components/FeaturedWork';
-import { ThreeImageShowcase } from './components/ThreeImageShowcase';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { FAQ } from './components/FAQ';
 import { ContactCTA } from './components/ContactCTA';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
-import { ImageModal } from './components/ImageModal';
 import TargetCursor from './components/TargetCursor';
 
 export const App = () => {
   const [contactModalOpen, setContactModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleOpenContactModal = () => {
     setContactModalOpen(true);
@@ -25,14 +21,6 @@ export const App = () => {
 
   const handleCloseContactModal = () => {
     setContactModalOpen(false);
-  };
-
-  const handleEnlargeImage = (src, title) => {
-    setSelectedImage({ src, title });
-  };
-
-  const handleCloseImageModal = () => {
-    setSelectedImage(null);
   };
 
   return (
@@ -52,9 +40,7 @@ export const App = () => {
         <Hero onOpenContactModal={handleOpenContactModal} />
         <TechStack />
         <About onOpenContactModal={handleOpenContactModal} />
-        <FeaturedWork onEnlargeImage={handleEnlargeImage} />
         <Skills />
-        <ThreeImageShowcase onEnlargeImage={handleEnlargeImage} />
         <Projects onOpenContactModal={handleOpenContactModal} />
         <FAQ />
         <ContactCTA onOpenContactModal={handleOpenContactModal} />
@@ -63,12 +49,6 @@ export const App = () => {
       <Footer />
 
       <ContactModal isOpen={contactModalOpen} onClose={handleCloseContactModal} />
-      <ImageModal
-        isOpen={Boolean(selectedImage)}
-        imageSrc={selectedImage?.src || null}
-        imageTitle={selectedImage?.title || null}
-        onClose={handleCloseImageModal}
-      />
     </div>
   );
 };

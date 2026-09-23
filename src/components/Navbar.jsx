@@ -3,7 +3,6 @@ import { Mail, Menu, X } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
 
-
 export const Navbar = ({ onOpenContactModal }) => {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,8 +35,9 @@ export const Navbar = ({ onOpenContactModal }) => {
   const navLinks = [
     { name: 'Home', href: '#home', id: 'home' },
     { name: 'About', href: '#about', id: 'about' },
-    { name: 'Services', href: '#skills', id: 'skills' },
+    { name: 'Skills', href: '#skills', id: 'skills' },
     { name: 'Projects', href: '#projects', id: 'projects' },
+    { name: 'FAQ', href: '#faq', id: 'faq' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -52,9 +52,9 @@ export const Navbar = ({ onOpenContactModal }) => {
 
   return (
     <>
-      <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
+      <header className="fixed top-4 sm:top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
         <nav
-          className={`pointer-events-auto transition-all duration-300 ease-out flex items-center justify-between rounded-full glass-pill px-3.5 sm:px-5 py-2 sm:py-2.5 max-w-4xl w-full mx-auto ${
+          className={`pointer-events-auto transition-all duration-300 ease-out flex items-center justify-between rounded-full glass-pill px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 max-w-4xl w-full mx-auto ${
             scrolled ? 'shadow-2xl shadow-black/80 border-white/[0.12] bg-[#0d0d11]/90' : 'border-white/[0.08]'
           }`}
           aria-label="Main Navigation"
@@ -68,7 +68,7 @@ export const Navbar = ({ onOpenContactModal }) => {
             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-pink-accent/40 shadow-sm shadow-pink-accent/20">
               <img
                 src={personalInfo.profileImage}
-                alt={personalInfo.name}
+                alt="Irin Akter - React Frontend Developer"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
             </div>
@@ -86,7 +86,7 @@ export const Navbar = ({ onOpenContactModal }) => {
                   key={link.id}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ease-out ${
+                  className={`px-3 lg:px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ease-out ${
                     isActive
                       ? 'bg-pink-accent text-[#050507] font-semibold shadow-md shadow-pink-accent/30'
                       : 'text-gray-300 hover:text-white hover:bg-white/[0.06]'
@@ -102,7 +102,7 @@ export const Navbar = ({ onOpenContactModal }) => {
           <div className="hidden md:flex items-center gap-3">
             <div className="h-4 w-[1px] bg-white/20" />
             <a
-              href={personalInfo.socialLinks.github}
+              href={personalInfo.socialLinks?.github || "https://github.com/itsiruuu"}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
@@ -134,7 +134,7 @@ export const Navbar = ({ onOpenContactModal }) => {
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-[#050507]/90 backdrop-blur-2xl flex flex-col justify-center items-center px-6 md:hidden animate-fade-in"
+          className="fixed inset-0 z-50 bg-[#050507]/90 backdrop-blur-2xl flex flex-col justify-center items-center px-6 md:hidden animate-fade-in"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
@@ -142,7 +142,7 @@ export const Navbar = ({ onOpenContactModal }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-pink-accent shadow-lg shadow-pink-accent/20 mb-2">
-              <img src={personalInfo.profileImage} alt={personalInfo.name} className="w-full h-full object-cover" />
+              <img src={personalInfo.profileImage} alt="Irin Akter - React Frontend Developer" className="w-full h-full object-cover" />
             </div>
             <p className="text-lg font-bold text-white">{personalInfo.name}</p>
             <p className="text-xs text-pink-accent -mt-3">{personalInfo.role}</p>
@@ -170,7 +170,7 @@ export const Navbar = ({ onOpenContactModal }) => {
 
             <div className="flex items-center justify-center gap-4 w-full">
               <a
-                href={personalInfo.socialLinks.github}
+                href={personalInfo.socialLinks?.github || "https://github.com/itsiruuu"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/5 rounded-full text-gray-300 hover:text-white hover:bg-white/10"
@@ -195,3 +195,5 @@ export const Navbar = ({ onOpenContactModal }) => {
     </>
   );
 };
+
+export default Navbar;

@@ -1,8 +1,7 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, InstagramIcon, BehanceIcon } from './Icons';
+import { ArrowUp, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
-
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -15,7 +14,7 @@ export const Footer = () => {
         {/* Brand */}
         <div className="flex items-center gap-3">
           <div className="w-7 h-7 rounded-full overflow-hidden border border-pink-accent/40 shadow-sm shadow-pink-accent/20">
-            <img src={personalInfo.profileImage} alt={personalInfo.name} className="w-full h-full object-cover" />
+            <img src={personalInfo.profileImage} alt="Irin Akter - React Frontend Developer" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold tracking-tight text-white text-base">
             {personalInfo.brandLogo}
@@ -26,8 +25,8 @@ export const Footer = () => {
         <nav className="flex items-center gap-5 sm:gap-7 flex-wrap justify-center text-xs font-medium text-gray-400">
           <a href="#home" className="hover:text-pink-accent transition-colors">Home</a>
           <a href="#about" className="hover:text-pink-accent transition-colors">About</a>
-          <a href="#projects" className="hover:text-pink-accent transition-colors">Projects</a>
           <a href="#skills" className="hover:text-pink-accent transition-colors">Skills</a>
+          <a href="#projects" className="hover:text-pink-accent transition-colors">Projects</a>
           <a href="#faq" className="hover:text-pink-accent transition-colors">FAQ</a>
           <a href="#contact" className="hover:text-pink-accent transition-colors">Contact</a>
         </nav>
@@ -35,8 +34,9 @@ export const Footer = () => {
         {/* Social Icons & Back to Top */}
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3">
+            {/* GitHub - always shown */}
             <a
-              href={personalInfo.socialLinks.github}
+              href={personalInfo.socialLinks?.github || "https://github.com/itsiruuu"}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -44,33 +44,28 @@ export const Footer = () => {
             >
               <GithubIcon className="w-4 h-4" />
             </a>
+
+            {/* Email - always shown */}
             <a
-              href={personalInfo.socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-gray-400 hover:text-white transition-colors"
+              href={personalInfo.socialLinks?.email || `mailto:${personalInfo.email}`}
+              aria-label="Email"
+              className="text-gray-400 hover:text-pink-accent transition-colors"
             >
-              <LinkedinIcon className="w-4 h-4" />
+              <Mail className="w-4 h-4" />
             </a>
-            <a
-              href={personalInfo.socialLinks.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <InstagramIcon className="w-4 h-4" />
-            </a>
-            <a
-              href={personalInfo.socialLinks.behance}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Behance"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <BehanceIcon className="w-4 h-4" />
-            </a>
+
+            {/* LinkedIn - only when personalInfo.linkedinUrl is non-empty */}
+            {personalInfo.linkedinUrl && (
+              <a
+                href={personalInfo.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+              </a>
+            )}
           </div>
 
           <button
@@ -86,3 +81,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
