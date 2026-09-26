@@ -4,7 +4,14 @@
 // =========================================================================
 
 import profileImg from '../assets/profile.jpg';
-
+import creativeAgency from "../assets/image8.png";
+import gourmetHaven from "../assets/image7.png";
+import evenza from "../assets/image6.png";
+import ecommerce from "../assets/image5.png";
+import tourys from "../assets/image4.png";
+import cheffest from "../assets/image1.png";
+import coffetto from "../assets/image2.png";
+import pumpInsta from "../assets/image3.png";
 // -------------------------------------------------------------------------
 // 1. PERSONAL INFORMATION
 // -------------------------------------------------------------------------
@@ -111,67 +118,105 @@ export const skills = [
 // 5. THINGS I'VE BUILT (6 Responsive Project Cards - UNTOUCHED)
 // -------------------------------------------------------------------------
 export const gridProjects = [
+  
   {
-    id: "pokemon-vault",
-    title: "Pokémon Card Ecommerce Ecosystem Platform",
-    category: "E-Commerce / Trading",
-    description: "An advanced collectibles trading exchange with live inventory telemetry, rarity tiering, and instantaneous instant-checkout flows.",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
-    tags: ["React", "JavaScript", "Tailwind CSS", "Stripe"],
-    demoUrl: "https://example.com/demo/pokemon",
-    githubUrl: "https://github.com/example/pokemon-vault",
+    id: "evenza",
+    title: "Evenza",
+    category: "Web Apps",
+    description:
+      "A modern and responsive web application built with React, Vite, and Tailwind CSS, featuring smooth animations and custom interactive components.",
+    image: evenza ,
+    tags: ["React", "Vite", "Tailwind CSS"],
+    demoUrl: "https://evenza-app.vercel.app/",
+    githubUrl: "",
+  },
+  
+  {
+    id: "gourmet-haven",
+    title: "Gourmet Haven",
+    category: "Web Design",
+    description:
+      "A sleek and elegant front-end website for a luxury dining restaurant, built with modern web standards and Bootstrap for a responsive experience across all devices.",
+    image: gourmetHaven ,
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    demoUrl: "https://gourmet-haven-restaurant-beta.vercel.app/",
+    githubUrl: "",
+  },
+
+    {
+    id: "e-commerce",
+    title: "E-Commerce",
+    category: "E-Commerce",
+    description:
+      "A fast, responsive, and user-friendly E-Commerce frontend platform built with React and Vite, designed to deliver an optimal online shopping experience.",
+    image: ecommerce,
+    tags: ["React", "Vite", "JavaScript"],
+    demoUrl: "https://e-commerce-ten-beta-91.vercel.app/",
+    githubUrl: "",
+  },
+  
+    {
+    id: "tourys",
+    title: "TOURy's Travel Website",
+    category: "Web Design",
+    description:
+      "A premium travel landing page UI template built with Tailwind CSS, highlighting popular tourist destinations such as Bromo and Komodo Island.",
+    image: tourys,
+    tags: ["HTML", "Tailwind CSS"],
+    demoUrl: "https://tourys-travel-website.vercel.app/",
+    githubUrl: "",
+  },
+ 
+  
+  {
+    id: "cheffest",
+    title: "Cheffest Restaurant App",
+    category: "Web Apps",
+    description:
+      "A modern and fully responsive web application for a fast-food restaurant featuring Naan Burgers, tacos, and custom meals, with dynamic menu navigation, category filtering, online ordering, and franchise pages.",
+    image: cheffest,
+    tags: ["React", "JavaScript", "CSS"],
+    demoUrl: "https://cheffest-restaurant-app.vercel.app/",
+    githubUrl: "",
+  },
+  
+  {
+    id: "pump-insta",
+    title: "Pump Insta",
+    category: "Web Design",
+    description:
+      "A responsive and modern Instagram growth agency website built with HTML, Tailwind CSS, and Bootstrap.",
+    image: pumpInsta,
+    tags: ["HTML", "Tailwind CSS"],
+    demoUrl: "https://pump-insta-inky.vercel.app/",
+    githubUrl: "",
+  },
+  
+  {
+    id: "creative-agency",
+    title: "Creative Agency Design",
+    category: "Web Design",
+    description:
+      "A clean and modern static web design for a Creative Agency landing page.",
+    image: creativeAgency,
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://creative-agency-design.vercel.app/",
+    githubUrl: "",
     featured: true,
   },
+
   {
-    id: "epicurean-table",
-    title: "Where Every Meal Feels Like Home",
-    category: "Culinary & Dining",
-    description: "An experiential gastronomical website featuring bespoke table bookings, interactive chef degustations, and fluid viewport transitions.",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
-    tags: ["Next.js", "Tailwind CSS", "Micro-animations"],
-    demoUrl: "https://example.com/demo/dining",
-    githubUrl: "https://github.com/example/epicurean-table",
+    id: "coffetto",
+    title: "Coffetto Coffee",
+    category: "Web Design",
+    description:
+      "A modern and fully responsive coffee website built with HTML and Tailwind CSS, featuring coffee products, history, manufacturing steps, testimonials, and a newsletter section.",
+    image: coffetto,
+    tags: ["HTML", "Tailwind CSS"],
+    demoUrl: "https://coffetto-coffee.vercel.app/",
+    githubUrl: "",
   },
-  {
-    id: "stream-viral-clips",
-    title: "Turn Streams into Viral Clips Instantly",
-    category: "AI SaaS Platform",
-    description: "Automated streaming video synthesis platform featuring real-time audio peak tracking, AI captioning, and cloud rendering queues.",
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80",
-    tags: ["React", "WebAudio API", "Node.js", "Tailwind"],
-    demoUrl: "https://example.com/demo/streamclips",
-    githubUrl: "https://github.com/example/streamclips",
-  },
-  {
-    id: "creative-studio-hub",
-    title: "Motion Studio & Video Synthesizer",
-    category: "Content Production",
-    description: "Browser-native video editing workstation with multi-track timeline sequencing, keyframe transitions, and hardware-accelerated exports.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
-    tags: ["JavaScript", "Canvas API", "WebGL", "Tailwind"],
-    demoUrl: "https://example.com/demo/motion-studio",
-    githubUrl: "https://github.com/example/motion-studio",
-  },
-  {
-    id: "kinetic-overshirt",
-    title: "KINETIC Luxury Streetwear Storefront",
-    category: "Luxury Fashion",
-    description: "High-fashion minimalist apparel storefront with 3D product viewports, dynamic fabric zoom inspection, and currency switching.",
-    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&q=80",
-    tags: ["React", "Tailwind CSS", "Shopify API"],
-    demoUrl: "https://example.com/demo/kinetic",
-    githubUrl: "https://github.com/example/kinetic-apparel",
-  },
-  {
-    id: "enterprise-metrics",
-    title: "Fintech Core Analytics & Telemetry Hub",
-    category: "SaaS Dashboard",
-    description: "Real-time enterprise metrics monitor with custom time-series charting, latency audits, and automated incident alert thresholds.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    tags: ["React", "D3.js", "JavaScript", "Tailwind"],
-    demoUrl: "https://example.com/demo/analytics",
-    githubUrl: "https://github.com/example/analytics-hub",
-  },
+
 ];
 
 // -------------------------------------------------------------------------
