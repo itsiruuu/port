@@ -225,32 +225,32 @@ export const gridProjects = [
 export const faqs = [
   {
     id: "faq-1",
-    question: "What is your typical project timeline?",
-    answer: "Most custom website projects take between 4 to 8 weeks from start to launch. This timeline includes planning, wireframing, high-fidelity UI design, and development. We value quality and clean execution, ensuring every stage receives thorough review.",
+    question: "How long does it take to build a website?",
+    answer: "The timeline depends on the project's size, features, and level of customization. A standard frontend website usually takes around 1–4 weeks. I focus on delivering a polished, responsive, and well-structured website without compromising on quality.",
   },
   {
     id: "faq-2",
-    question: "How much does a custom web design and development project cost?",
-    answer: "Every project is scoped individually based on complexity, feature set, custom animations, and integrations. Typically, standard developer portfolios and marketing sites range between $2,500 and $6,000, while complex web applications are quoted on a milestone basis.",
+    question: "How much does a website project cost?",
+    answer: "Every project is different, so pricing depends on the number of pages, design complexity, animations, and required features. Once I understand your requirements, I can provide a clear and customized estimate for your project.",
   },
   {
     id: "faq-3",
-    question: "Will I be able to update content on my website easily?",
-    answer: "Yes, absolutely. The codebase is organized with clear, modular data files so you can update text, projects, and personal details in one place. Alternatively, headless CMS integration (such as Sanity, Contentful, or Strapi) can be plugged in seamlessly.",
+    question: "Will my website be responsive on all devices?",
+    answer: "Absolutely. Every website I build is designed with responsiveness in mind. The layout adapts smoothly to desktop, tablet, and mobile screens, providing a consistent and user-friendly experience across devices.",
   },
   {
     id: "faq-4",
-    question: "Do you build custom designs or use pre-made templates?",
-    answer: "Every single build is crafted 100% custom from scratch. No cookie-cutter templates or bloated page builders. This ensures your brand identity stands out with bespoke micro-interactions, clean semantic HTML, and lightning-fast load times.",
+    question: "Do you create custom designs or use templates?",
+    answer: "I build websites around the project's specific goals and requirements. Rather than simply relying on ready-made templates, I focus on creating clean, modern layouts with thoughtful interactions and a unique visual experience.",
   },
   {
     id: "faq-5",
-    question: "What technologies do you use for development?",
-    answer: "My primary stack revolves around modern React, Next.js, JavaScript, and Tailwind CSS. For animation and interactions, I employ native CSS transforms and lightweight motion libraries. Everything is bundled with Vite or Turbopack for optimal performance.",
+    question: "What technologies do you work with?",
+    answer: "My frontend stack includes HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap, and Vite. I also use Git and GitHub to maintain clean, organized, and version-controlled projects.",
   },
   {
     id: "faq-6",
-    question: "Do you provide post-launch support and maintenance?",
-    answer: "Yes. All delivered projects come with 30 days of complimentary post-launch bug fixing, optimization, and walkthrough documentation. Ongoing retainer maintenance packages are also available for continuous feature development and updates.",
+    question: "Do you provide support after the website is completed?",
+    answer: "Yes. My support doesn't necessarily end when the website goes live. I can help with frontend bug fixes, small design or content updates, and deployment-related issues to keep your website running smoothly.",
   },
 ];
