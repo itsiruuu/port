@@ -36,7 +36,7 @@ export const Skills = () => {
           Skills &amp; <span className="text-pink-accent">Technologies</span>
         </h2>
         <p className="text-sm sm:text-base text-gray-400 mt-3 font-normal max-w-2xl mx-auto leading-relaxed">
-          Technologies and tools I work with to build responsive, modern, and clean web interfaces.
+          Technologies and tools I use to build responsive, modern, and interactive web interfaces.
         </p>
       </div>
 

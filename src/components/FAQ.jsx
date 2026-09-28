@@ -15,13 +15,13 @@ export const FAQ = () => {
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
         <span className="text-xs font-bold tracking-widest text-pink-accent uppercase mb-3 inline-block">
-          Have Questions?
+          Curious About Working Together?
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
           Frequently Asked Questions
         </h2>
         <p className="text-sm sm:text-base text-gray-400 mt-3 font-normal leading-relaxed">
-          Got a project in mind or curious about how we work? Here are answers to the most common questions clients ask us about our design and development process.
+          Have a project in mind or want to know more about my process? Explore answers to some of the questions you may have before we start building something together.
         </p>
       </div>
 

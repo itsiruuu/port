@@ -27,8 +27,7 @@ export const Projects = ({ onOpenContactModal }) => {
         </h2>
 
         <p className="text-sm sm:text-base text-gray-400 mt-3 max-w-2xl mx-auto leading-relaxed">
-          A selection of websites and digital experiences I've designed and
-          developed.
+         A selection of websites and digital experiences I've designed and developed.
         </p>
       </div>
 

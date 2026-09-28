@@ -27,15 +27,15 @@ export const personalInfo = {
   // Placeholder URLs (will render UI only when non-empty)
   resumeUrl: "",       // I will fill this later
   ogImageUrl: "",      // I will fill this later
-  linkedinUrl: "",     // I will fill this later
+  linkedinUrl: "https://www.linkedin.com/in/irin-akter-13946543b/",    
 
-  heroEyebrow: "HELLO, INTERNET. I'M",
-  heroHeadlinePrefix: "I build clean, responsive\nweb interfaces ",
-  heroHeadlineAccent: "with React.",
-  heroBio: "I'm a frontend developer from Dhaka who builds responsive websites with React, Tailwind CSS and JavaScript. Open to junior frontend roles and internships.",
+  heroEyebrow: "HELLO, I'M",
+  heroHeadlinePrefix: "I build interfaces that",
+  heroHeadlineAccent: " feel as good as they look.",
+  heroBio: "Frontend developer from Dhaka, crafting responsive and interactive web experiences with React, JavaScript, and Tailwind CSS. Always learning, experimenting, and turning ideas into thoughtful digital experiences.",
   
   aboutSubtitle: "Frontend Developer · Dhaka, Bangladesh",
-  aboutBio: "I build responsive, clean web interfaces with React and Tailwind CSS. I'm focused on writing clean, readable code and constantly improving my JavaScript and Node.js fundamentals. Looking for a junior frontend role or internship where I can contribute, learn, and grow as part of a development team.",
+  aboutBio: "I build modern, responsive, and interactive web experiences using React, JavaScript, and Tailwind CSS. I enjoy turning ideas and designs into clean, user-friendly interfaces with a strong focus on detail and performance.I'm continuously improving my frontend skills, exploring new technologies, and building projects that challenge me to grow. I'm currently open to junior frontend roles, internships, and opportunities to collaborate on meaningful digital experiences.",
 
   socialLinks: {
     github: "https://github.com/itsiruuu",
@@ -86,36 +86,36 @@ export const coreToolsList = [
 export const skills = [
   {
     id: "frontend-core",
-    categoryTitle: "Frontend Core",
+    categoryTitle: "Frontend Development",
     iconName: "Layout",
-    description: "Building responsive, modern, and accessible user interfaces from scratch.",
-    skillTags: ["HTML", "CSS", "JavaScript", "React"],
+    description: "Building clean, responsive, and user-friendly interfaces with modern frontend technologies.",
+    skillTags: ["HTML5", "CSS3", "JavaScript", "React"],
   },
   {
     id: "styling-frameworks",
-    categoryTitle: "Styling & Frameworks",
+    categoryTitle: "Styling & UI",
     iconName: "Sparkles",
-    description: "Creating mobile-first responsive layouts with clean utility and component systems.",
-    skillTags: ["Tailwind CSS", "Bootstrap"],
+    description: "Creating mobile-first layouts with reusable components and modern styling systems.",
+    skillTags: ["Tailwind CSS", "Bootstrap","Responsive Design"],
   },
   {
-    id: "programming-backend",
-    categoryTitle: "Programming & Backend",
+    id: "programming-backend ",
+    categoryTitle: "Programming & Backend Basics",
     iconName: "Terminal",
-    description: "Writing solid programmatic logic and lightweight server scripts.",
+    description: "Building a strong foundation in programming logic and backend development.",
     skillTags: ["Node.js", "C/C++"],
   },
   {
     id: "tools-collaboration",
-    categoryTitle: "Version Control & Tools",
+    categoryTitle: "Tools Control & Version ",
     iconName: "GitBranch",
-    description: "Collaborating with structured commits, version control, and modern editors.",
-    skillTags: ["Git & GitHub", "VS Code"],
+    description: "Using modern development tools and version control for organized and efficient workflows.",
+    skillTags: ["Git ", "GitHub", "VS Code"],
   },
 ];
 
 // -------------------------------------------------------------------------
-// 5. THINGS I'VE BUILT (6 Responsive Project Cards - UNTOUCHED)
+// 5. THINGS I'VE BUILT
 // -------------------------------------------------------------------------
 export const gridProjects = [
   

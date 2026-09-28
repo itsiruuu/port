@@ -24,7 +24,7 @@ export const ContactCTA = ({ onOpenContactModal }) => {
               Let's connect.
             </h2>
             <p className="text-xs sm:text-sm text-gray-400 mt-3 font-normal max-w-md">
-              Open to junior frontend roles and internships. Feel free to reach out.
+             Have a project, opportunity, or idea in mind? I'd love to hear from you. I'm open to junior frontend roles, internships, and exciting collaborations. Let's connect and create something meaningful together.
             </p>
           </div>
 
@@ -130,7 +130,7 @@ export const ContactCTA = ({ onOpenContactModal }) => {
 
         {/* Bottom Copyright Banner */}
         <div className="mt-14 pt-8 border-t border-white/[0.06] text-center text-[11px] sm:text-xs text-gray-500 font-medium relative z-10">
-          &copy; {new Date().getFullYear()} Designed &amp; Built by &mdash; <span className="text-gray-300 font-semibold">{personalInfo.name.toUpperCase()}</span>. All rights reserved.
+          &copy; {new Date().getFullYear()}  <span className="text-gray-300 font-semibold">{personalInfo.name.toUpperCase()}</span>.Crafted with curiosity & code.
         </div>
       </div>
     </section>

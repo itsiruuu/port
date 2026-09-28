@@ -27,8 +27,8 @@ export const Hero = ({ onOpenContactModal }) => {
 
       {/* Main Headline */}
       <h1 className="text-4xl sm:text-6xl md:text-7xl 2xl:text-8xl font-extrabold text-white tracking-tight leading-[1.12] sm:leading-[1.1] max-w-5xl mx-auto mb-6 sm:mb-8">
-        I build clean, responsive <br className="hidden sm:block" />
-        web interfaces{' '}
+        I build interfaces that<br className="hidden sm:block" />
+        {' '}
         <span className="text-pink-accent text-glow-pink inline-block relative">
           {personalInfo.heroHeadlineAccent || "with React."}
           <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-pink-accent to-transparent opacity-80" />
