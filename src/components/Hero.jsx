@@ -30,7 +30,7 @@ export const Hero = ({ onOpenContactModal }) => {
         I build interfaces that<br className="hidden sm:block" />
         {' '}
         <span className="text-pink-accent text-glow-pink inline-block relative">
-          {personalInfo.heroHeadlineAccent || "with React."}
+          {personalInfo.heroHeadlineAccent || "feel as good as they "}
           <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-pink-accent to-transparent opacity-80" />
         </span>
       </h1>

@@ -4,8 +4,10 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TechStack } from './components/TechStack';
 import { About } from './components/About';
+import { Services } from './components/Services';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
+import { Process } from './components/Process';
 import { FAQ } from './components/FAQ';
 import { ContactCTA } from './components/ContactCTA';
 import { Footer } from './components/Footer';
@@ -40,8 +42,10 @@ export const App = () => {
         <Hero onOpenContactModal={handleOpenContactModal} />
         <TechStack />
         <About onOpenContactModal={handleOpenContactModal} />
+        <Services />
         <Skills />
         <Projects onOpenContactModal={handleOpenContactModal} />
+        <Process />
         <FAQ />
         <ContactCTA onOpenContactModal={handleOpenContactModal} />
       </main>

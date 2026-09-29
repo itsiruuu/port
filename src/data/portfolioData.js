@@ -254,3 +254,33 @@ export const faqs = [
     answer: "Yes. My support doesn't necessarily end when the website goes live. I can help with frontend bug fixes, small design or content updates, and deployment-related issues to keep your website running smoothly.",
   },
 ];
+
+// -------------------------------------------------------------------------
+// 7. DEVELOPMENT PROCESS
+// -------------------------------------------------------------------------
+export const processData = [
+  {
+    step: '01',
+    title: 'Understand',
+    description: 'Grasp requirements, user needs, and core goals before writing a single line of code.',
+    icon: 'search',
+  },
+  {
+    step: '02',
+    title: 'Design',
+    description: 'Create clear layouts, thoughtful visual hierarchies, and intuitive component structures.',
+    icon: 'palette',
+  },
+  {
+    step: '03',
+    title: 'Build',
+    description: 'Write clean, modular React components with semantic HTML and utility-first CSS.',
+    icon: 'code',
+  },
+  {
+    step: '04',
+    title: 'Polish',
+    description: 'Refine responsiveness, interactions, accessibility, and visual details to create a smooth experience.',
+    icon: 'sparkles',
+  },
+];
